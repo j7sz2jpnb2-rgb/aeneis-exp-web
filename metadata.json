@@ -1,0 +1,6 @@
+{
+  "name": "埃涅阿斯纪 · 中文诗体翻译",
+  "description": "维吉尔《埃涅阿斯纪》中文诗体翻译现代极简数字典藏版。纯白与冷灰高阶极简排版，内嵌侧边跟随行号即时跳转、十二卷卷首插画预留位、三幅舆图、词条即时悬浮注释、单次30行复制保护及 AI 语义对比防爬架构。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,140 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  :root {
+    --bg-canvas: #FCFCFA;
+    --bg-subtle: #F7F7F4;
+    --bg-surface: #F2F2EE;
+    --ink-primary: #18181B;
+    --ink-secondary: #52525B;
+    --ink-muted: #A1A1AA;
+    --border-subtle: #E6E6E1;
+    --border-hairline: #EFEFEA;
+    --font-serif: 'Noto Serif SC', 'Source Han Serif SC', 'Songti SC', serif;
+    --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'JetBrains Mono', monospace;
+  }
+
+  .dark {
+    --bg-canvas: #0B0B0D;
+    --bg-subtle: #121215;
+    --bg-surface: #18181C;
+    --ink-primary: #F4F4F5;
+    --ink-secondary: #A1A1AA;
+    --ink-muted: #71717A;
+    --border-subtle: #27272A;
+    --border-hairline: #1E1E22;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--bg-canvas);
+    color: var(--ink-primary);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  code, pre, .font-mono {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+.font-serif-sc {
+  font-family: var(--font-serif);
+}
+
+/* Contemporary Minimalist Editorial Buttons: No heavy black blocks, soft mineral slate & mist */
+.btn-opus-primary {
+  background-color: #27272A;
+  color: #FAFAFA;
+  border: 1px solid #27272A;
+  border-radius: 5px;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-opus-primary:hover {
+  background-color: #3F3F46;
+  border-color: #3F3F46;
+}
+.btn-opus-primary:active {
+  transform: scale(0.99);
+}
+
+/* Soft Mineral Action (Replaces harsh dark buttons inside light floating cards) */
+.btn-opus-soft {
+  background-color: #F4F4F5;
+  color: #18181B;
+  border: 1px solid #E4E4E7;
+  border-radius: 5px;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-opus-soft:hover {
+  background-color: #E4E4E7;
+  border-color: #D4D4D8;
+  color: #09090B;
+}
+
+.btn-opus-secondary {
+  background-color: #FFFFFF;
+  color: #3F3F46;
+  border: 1px solid #E4E4E7;
+  border-radius: 5px;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-opus-secondary:hover {
+  background-color: #FAFAFA;
+  border-color: #D4D4D8;
+  color: #18181B;
+}
+
+.dark .btn-opus-primary {
+  background-color: #E4E4E7;
+  color: #09090B;
+  border-color: #E4E4E7;
+}
+.dark .btn-opus-primary:hover {
+  background-color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.dark .btn-opus-soft {
+  background-color: #27272A;
+  color: #F4F4F5;
+  border-color: #3F3F46;
+}
+.dark .btn-opus-soft:hover {
+  background-color: #3F3F46;
+  border-color: #52525B;
+}
+
+.dark .btn-opus-secondary {
+  background-color: #121215;
+  border-color: #27272A;
+  color: #D4D4D8;
+}
+.dark .btn-opus-secondary:hover {
+  background-color: #18181B;
+  border-color: #3F3F46;
+  color: #FAFAFA;
+}
+
+@keyframes subtleFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: subtleFadeUp 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
